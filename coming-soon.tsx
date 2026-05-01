@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Mail, Github, Twitter, Linkedin, ArrowRight } from "lucide-react"
+import { Mail, Github, Linkedin, ArrowRight, Globe, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
@@ -52,8 +52,37 @@ export default function ComingSoonPage() {
     setEmail("")
   }
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'LadeStack - Coming Soon',
+    description: 'We are working hard to bring you something extraordinary. Stay tuned and be the first to know when we launch.',
+    url: 'https://ladestack.in',
+    publisher: {
+      '@type': 'Organization',
+      name: 'LadeStack',
+      url: 'https://ladestack.in',
+    },
+    sameAs: [
+      'https://www.instagram.com/girish_lade_/',
+      'https://www.linkedin.com/in/girish-lade-075bba201/',
+      'https://github.com/girishlade111',
+      'https://codepen.io/Girish-Lade-the-looper',
+    ],
+    potentialAction: {
+      '@type': 'SubscribeAction',
+      target: 'https://ladestack.in?email={email}',
+      queryInput: 'required name=email',
+    },
+  }
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-secondary/20 p-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-secondary/20 p-4">
       <div className="w-full max-w-3xl text-center space-y-8">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
           Something Amazing is <span className="text-primary">Coming Soon</span>
@@ -90,24 +119,62 @@ export default function ComingSoonPage() {
         </div>
 
         <div className="flex justify-center gap-6 mt-8">
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Twitter className="h-6 w-6" />
-            <span className="sr-only">Twitter</span>
+          <a 
+            href="https://www.instagram.com/girish_lade_/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+            aria-label="Follow us on Instagram"
+          >
+            <Instagram className="h-5 w-5" />
           </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Github className="h-6 w-6" />
-            <span className="sr-only">GitHub</span>
+          <a 
+            href="https://www.linkedin.com/in/girish-lade-075bba201/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+            aria-label="Connect on LinkedIn"
+          >
+            <Linkedin className="h-5 w-5" />
           </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Linkedin className="h-6 w-6" />
-            <span className="sr-only">LinkedIn</span>
+          <a 
+            href="https://github.com/girishlade111" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+            aria-label="Follow on GitHub"
+          >
+            <Github className="h-5 w-5" />
           </a>
-          <a href="mailto:info@example.com" className="text-muted-foreground hover:text-foreground transition-colors">
-            <Mail className="h-6 w-6" />
-            <span className="sr-only">Email</span>
+          <a 
+            href="https://codepen.io/Girish-Lade-the-looper" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+            aria-label="View on CodePen"
+          >
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6 0 5.302-4.298 9.6-9.6 9.6-5.302 0-9.6-4.298-9.6-9.6 0-5.302 4.298-9.6 9.6-9.6zm-2.4 4.8v7.2l6 3.6-6 3.6v-7.2l-6-3.6 6-3.6zm12 0v7.2l6-3.6v7.2l-6-3.6 6-3.6z"/>
+            </svg>
+          </a>
+          <a 
+            href="mailto:admin@ladestack.in" 
+            className="p-3 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+            aria-label="Send us an email"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+          <a 
+            href="https://ladestack.in" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-muted/50 hover:bg-muted text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+            aria-label="Visit our website"
+          >
+            <Globe className="h-5 w-5" />
           </a>
         </div>
       </div>
-    </div>
+    </>
   )
 }
