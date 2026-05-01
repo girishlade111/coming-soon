@@ -52,37 +52,8 @@ export default function ComingSoonPage() {
     setEmail("")
   }
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'LadeStack - Coming Soon',
-    description: 'We are working hard to bring you something extraordinary. Stay tuned and be the first to know when we launch.',
-    url: 'https://ladestack.in',
-    publisher: {
-      '@type': 'Organization',
-      name: 'LadeStack',
-      url: 'https://ladestack.in',
-    },
-    sameAs: [
-      'https://www.instagram.com/girish_lade_/',
-      'https://www.linkedin.com/in/girish-lade-075bba201/',
-      'https://github.com/girishlade111',
-      'https://codepen.io/Girish-Lade-the-looper',
-    ],
-    potentialAction: {
-      '@type': 'SubscribeAction',
-      target: 'https://ladestack.in?email={email}',
-      queryInput: 'required name=email',
-    },
-  }
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-secondary/20 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-background to-secondary/20 p-4">
       <div className="w-full max-w-3xl text-center space-y-8">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
           Something Amazing is <span className="text-primary">Coming Soon</span>
@@ -174,7 +145,6 @@ export default function ComingSoonPage() {
             <Globe className="h-5 w-5" />
           </a>
         </div>
-      </div>
-    </>
+</div>
   )
 }
