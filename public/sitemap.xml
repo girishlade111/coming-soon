@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <!-- Main Page -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ladestack.in/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ladestack.in/"/>
   </url>
-  <!-- Instagram Profile -->
+  <url>
+    <loc>https://ladestack.in/#about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-01</lastmod>
+  </url>
+  <url>
+    <loc>https://ladestack.in/#subscribe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-05-01</lastmod>
+  </url>
   <url>
     <loc>https://www.instagram.com/girish_lade_/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
   </url>
-  <!-- LinkedIn Profile -->
   <url>
     <loc>https://www.linkedin.com/in/girish-lade-075bba201/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
   </url>
-  <!-- GitHub Profile -->
   <url>
     <loc>https://github.com/girishlade111</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
   </url>
-  <!-- CodePen Profile -->
   <url>
     <loc>https://codepen.io/Girish-Lade-the-looper</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <lastmod>2026-04-30</lastmod>
+    <lastmod>2026-05-01</lastmod>
   </url>
 </urlset>
