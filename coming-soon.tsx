@@ -41,7 +41,7 @@ export default function ComingSoonPage() {
     return () => clearInterval(timer)
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
     // Here you would typically send the email to your backend
     console.log("Email submitted:", email)
