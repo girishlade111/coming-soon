@@ -64,13 +64,6 @@ export const metadata: Metadata = {
     'og:ttl': '604800',
     'og:email': 'admin@ladestack.in',
   },
-  verification: {
-    google: 'google-site-verification-code',
-  },
-}
-
-export function generateMetadata(): Metadata {
-  return metadata
 }
 
 export const viewport = {
