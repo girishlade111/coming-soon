@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: 'LadeStack - We are working hard to bring you something extraordinary. Stay tuned and be the first to know when we launch. Subscribe for exclusive updates.',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://ladestack.in/og-image.png',
         width: 1200,
         height: 630,
         alt: 'LadeStack - Something Amazing is Coming Soon',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: 'Coming Soon | LadeStack - Something Amazing is Coming',
     description: 'LadeStack - We are working hard to bring you something extraordinary. Stay tuned and be the first to know when we launch.',
     creator: '@girish_lade_',
-    images: ['/og-image.png'],
+    images: ['https://ladestack.in/og-image.png'],
   },
   alternates: {
     canonical: 'https://ladestack.in',
@@ -64,6 +64,11 @@ export const metadata: Metadata = {
     'og:ttl': '604800',
     'og:email': 'admin@ladestack.in',
   },
+}
+
+export const metadata2: Metadata = {
+  title: 'Coming Soon | LadeStack - Something Amazing is Coming',
+  description: 'LadeStack - We are working hard to bring you something extraordinary. Stay tuned and be the first to know when we launch. Subscribe for exclusive updates.',
 }
 
 export const viewport = {
@@ -81,9 +86,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'LadeStack',
+    url: 'https://ladestack.in',
+    logo: 'https://ladestack.in/og-image.png',
+    description: 'Working on something extraordinary. Coming soon.',
+    sameAs: [
+      'https://www.instagram.com/girish_lade_/',
+      'https://www.linkedin.com/in/girish-lade-075bba201/',
+      'https://github.com/girishlade111',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'admin@ladestack.in',
+      contactType: 'customer service',
+    },
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
@@ -91,6 +119,14 @@ html {
   --font-mono: ${GeistMono.variable};
 }
         `}</style>
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="LadeStack" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-config" content="none" />
       </head>
       <body>
         {children}
