@@ -66,11 +66,6 @@ export const metadata: Metadata = {
   },
 }
 
-export const metadata2: Metadata = {
-  title: 'Coming Soon | LadeStack - Something Amazing is Coming',
-  description: 'LadeStack - We are working hard to bring you something extraordinary. Stay tuned and be the first to know when we launch. Subscribe for exclusive updates.',
-}
-
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
