@@ -1,8 +1,6 @@
 "use client";
 
-import type React from "react"
-
-import { useState, useEffect, type ReactElement, type JSX } from "react"
+import { useState, useEffect, FormEvent } from "react"
 import { Mail, Github, Linkedin, ArrowRight, Globe, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
