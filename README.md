@@ -307,3 +307,7 @@ This project is private and for demonstration purposes. Built with [v0.app](http
 - **v0 Project:** [https://v0.app/chat/projects/eQMxRSw9iBR](https://v0.app/chat/projects/eQMxRSw9iBR)
 - **Next.js Docs:** [https://nextjs.org/docs](https://nextjs.org/docs)
 - **Tailwind CSS:** [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+
+---
+
+**Built by [Girish Lade](https://ladestack.in)** — more projects at [ladestack.in](https://ladestack.in)
